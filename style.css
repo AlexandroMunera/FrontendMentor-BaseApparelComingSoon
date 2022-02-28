@@ -3,28 +3,82 @@ body {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
   padding: 2rem 0;
+  min-height: 100vh;
 }
 
-.logo {
+@media (min-width: 376px) {
+  body {
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 55% 45%;
+        grid-template-columns: 55% 45%;
+        grid-template-areas: "info hero";
+  }
+}
+
+.logo-mobile {
   width: 6rem;
   padding-left: 2rem;
   margin-bottom: 2rem;
 }
 
+@media (min-width: 376px) {
+  .logo-mobile {
+    display: none;
+  }
+}
+
+.logo-desktop {
+  display: none;
+}
+
+@media (min-width: 376px) {
+  .logo-desktop {
+    min-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+    display: block;
+  }
+}
+
 .heroImage {
   width: 100%;
+  grid-area: hero;
+}
+
+@media (min-width: 376px) {
+  .heroImage {
+    content: url(images/hero-desktop.jpg);
+    max-height: 100vh;
+  }
 }
 
 main {
   padding: 2rem;
   text-align: center;
+  grid-area: info;
+}
+
+@media (min-width: 376px) {
+  main {
+    background-image: url(/images/bg-pattern-desktop.svg);
+    padding: 1rem 18rem 0 10rem;
+    text-align: left;
+  }
 }
 
 h1 {
-  margin: 0;
+  margin: 0 0 2rem 0;
   font-size: 2.3rem;
   text-transform: uppercase;
   letter-spacing: 0.7rem;
+}
+
+@media (min-width: 376px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 h1 > span {
@@ -39,6 +93,12 @@ p {
   font-weight: 400;
 }
 
+@media (min-width: 376px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
 .search-box {
   border: 1px solid #ce9797;
   display: -webkit-box;
@@ -50,12 +110,14 @@ p {
   border-radius: 1.5rem;
   overflow: hidden;
   height: 2.5rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .search-box > input {
   border: none;
   padding-left: 1rem;
+  width: 90%;
+  outline: none;
 }
 
 .search-box > input::-webkit-input-placeholder {
@@ -93,5 +155,11 @@ p {
   background-image: linear-gradient(to right, #f8bfbf, #ee8c8c);
   -webkit-box-shadow: 10px 5px 5px black;
           box-shadow: 10px 5px 5px black;
+}
+
+@media (min-width: 376px) {
+  .search-box > button {
+    width: 4.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

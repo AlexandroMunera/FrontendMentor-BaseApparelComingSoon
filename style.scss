@@ -1,0 +1,91 @@
+// ## Colors
+
+// ### Primary
+
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+
+// ### Neutral
+
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+// ### Gradients
+
+// Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+// Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.logo {
+  width: 6rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.heroImage {
+  width: 100%;
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+}
+
+h1 > span {
+  color: $Desaturated-Red;
+  font-weight: 300;
+}
+
+p {
+  color: $Desaturated-Red;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+}
+
+.search-box {
+  border: 1px solid $Desaturated-Red;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 2.5rem;
+  margin-top: 2rem;
+
+  & > input {
+    border: none;
+    padding-left: 1rem;
+  }
+
+  & > input::placeholder {
+    color: $Desaturated-Red;
+    opacity: 0.5;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  & > button {
+      display: grid;
+      place-items: center;
+    width: 3.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    background-image: linear-gradient(
+      to right,
+      hsl(0, 80%, 86%),
+      hsl(0, 74%, 74%)
+    );
+    box-shadow: 10px 5px 5px black;
+  }
+}

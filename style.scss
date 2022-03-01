@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 2rem 0;
   min-height: 100vh;
+  box-sizing: border-box;
 
   @media (min-width: 376px) {
     padding: 0;
@@ -56,7 +57,7 @@ body {
 
   @media (min-width: 376px) {
     content: url(images/hero-desktop.jpg);
-    max-height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -99,6 +100,11 @@ p {
   }
 }
 
+form {
+  margin-top: 3rem;
+  display: flex;
+}
+
 .search-box {
   border: 1px solid $Desaturated-Red;
   display: flex;
@@ -106,8 +112,8 @@ p {
   justify-content: space-between;
   border-radius: 1.5rem;
   overflow: hidden;
-  height: 2.5rem;
-  margin-top: 3rem;
+  height: 3rem;
+  width: 100%;
 
   & > input {
     border: none;
@@ -121,46 +127,57 @@ p {
     opacity: 0.5;
     font-family: "Josefin Sans", sans-serif;
   }
+}
 
-  & > button {
-    display: grid;
-    place-items: center;
-    width: 3.5rem;
-    border: none;
-    border-radius: 1.5rem;
+button {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  left: -50px;
+  height: 3.3rem;
+
+  @media (min-width: 376px) {
+    width: 5rem;
+  }
+}
+
+button:hover {
     background-image: linear-gradient(
-      to right,
-      hsl(0, 80%, 86%),
-      hsl(0, 74%, 74%)
-    );
-    cursor: pointer;
-    height: 100%;
-
-    @media (min-width: 376px) {
-      width: 4.5rem;
-    }
-  }
-
-  & > button:hover {
-    opacity: 0.5;
-  }
+        to right,
+        hsl(0, 57%, 93%),
+        hsl(0, 61%, 90%)
+      );
 }
 
 .invalid {
-    border: 2px solid $Soft-Red;
+  border: 2px solid $Soft-Red;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .show-error-icon {
-    height: 50%;
-    margin-right: .5rem;
+  height: 50%;
+  margin-right: 3rem;
+}
+
+.error-container {
+    text-align: left;
 }
 
 .error {
   color: $Soft-Red;
-  font-size: .7rem;
-    padding-left: 1rem;
+  font-size: 0.7rem;
+  padding-left: 1rem;
 }

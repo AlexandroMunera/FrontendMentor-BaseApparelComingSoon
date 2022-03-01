@@ -1,4 +1,3 @@
-const form = document.getElementsByTagName("form")[0];
 const email = document.getElementById("mail");
 const emailError = document.getElementById("error");
 const searchBox = document.getElementById("search");

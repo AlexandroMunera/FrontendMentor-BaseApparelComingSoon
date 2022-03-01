@@ -39,12 +39,16 @@
       <div id="search" class="search-box">
         <input id="mail" name="mail" minlength="8" required type="email" placeholder="Email Address" />
         <img id="icon-error" class="hide" src="/images/icon-error.svg" alt="error icon">
-        <button>
-          <img src="/images/icon-arrow.svg" alt="icon arrow" />
-        </button>
+        
       </div>
-      <span id="error" class="error" aria-live="polite"></span>
+      <button>
+        <img src="/images/icon-arrow.svg" alt="icon arrow" />
+      </button>
     </form>
+    <div class="error-container">
+
+      <span id="error" class="error" aria-live="polite"></span>
+    </div>
     </main>
     <script src="script.js"></script>
   </body>

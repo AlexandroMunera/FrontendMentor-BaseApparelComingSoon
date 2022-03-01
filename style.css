@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 2rem 0;
   min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (min-width: 376px) {
@@ -50,7 +52,7 @@ body {
 @media (min-width: 376px) {
   .heroImage {
     content: url(images/hero-desktop.jpg);
-    max-height: 100vh;
+    min-height: 100vh;
   }
 }
 
@@ -99,6 +101,13 @@ p {
   }
 }
 
+form {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .search-box {
   border: 1px solid #ce9797;
   display: -webkit-box;
@@ -112,8 +121,8 @@ p {
           justify-content: space-between;
   border-radius: 1.5rem;
   overflow: hidden;
-  height: 2.5rem;
-  margin-top: 3rem;
+  height: 3rem;
+  width: 100%;
 }
 
 .search-box > input {
@@ -147,27 +156,31 @@ p {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.search-box > button {
+button {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  width: 3.5rem;
+  width: 4.5rem;
   border: none;
   border-radius: 1.5rem;
   background-image: -webkit-gradient(linear, left top, right top, from(#f8bfbf), to(#ee8c8c));
   background-image: linear-gradient(to right, #f8bfbf, #ee8c8c);
   cursor: pointer;
-  height: 100%;
+  position: relative;
+  top: 0px;
+  left: -50px;
+  height: 3.3rem;
 }
 
 @media (min-width: 376px) {
-  .search-box > button {
-    width: 4.5rem;
+  button {
+    width: 5rem;
   }
 }
 
-.search-box > button:hover {
-  opacity: 0.5;
+button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f7e3e3), to(#f5d6d6));
+  background-image: linear-gradient(to right, #f7e3e3, #f5d6d6);
 }
 
 .invalid {
@@ -180,12 +193,16 @@ p {
 
 .show-error-icon {
   height: 50%;
-  margin-right: .5rem;
+  margin-right: 3rem;
+}
+
+.error-container {
+  text-align: left;
 }
 
 .error {
   color: #f96262;
-  font-size: .7rem;
+  font-size: 0.7rem;
   padding-left: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

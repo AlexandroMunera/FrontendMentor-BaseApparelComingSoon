@@ -35,12 +35,17 @@
         Add your email below to stay up-to-date with announcements and our
         launch deals.
       </p>
-      <div class="search-box">
-        <input type="text" placeholder="Email Address" />
+      <form novalidate>
+      <div id="search" class="search-box">
+        <input id="mail" name="mail" minlength="8" required type="email" placeholder="Email Address" />
+        <img id="icon-error" class="hide" src="/images/icon-error.svg" alt="error icon">
         <button>
           <img src="/images/icon-arrow.svg" alt="icon arrow" />
         </button>
       </div>
+      <span id="error" class="error" aria-live="polite"></span>
+    </form>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

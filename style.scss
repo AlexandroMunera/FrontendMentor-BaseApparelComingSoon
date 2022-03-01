@@ -102,6 +102,7 @@ p {
 .search-box {
   border: 1px solid $Desaturated-Red;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-radius: 1.5rem;
   overflow: hidden;
@@ -132,10 +133,34 @@ p {
       hsl(0, 80%, 86%),
       hsl(0, 74%, 74%)
     );
-    box-shadow: 10px 5px 5px black;
+    cursor: pointer;
+    height: 100%;
 
     @media (min-width: 376px) {
       width: 4.5rem;
     }
   }
+
+  & > button:hover {
+    opacity: 0.5;
+  }
+}
+
+.invalid {
+    border: 2px solid $Soft-Red;
+}
+
+.hide {
+    display: none;
+}
+
+.show-error-icon {
+    height: 50%;
+    margin-right: .5rem;
+}
+
+.error {
+  color: $Soft-Red;
+  font-size: .7rem;
+    padding-left: 1rem;
 }
